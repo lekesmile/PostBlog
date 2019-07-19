@@ -1,0 +1,23 @@
+<% include ../views/partials/header %>
+<h1>Home</h1>
+<p> <%= hommi %></p>
+
+
+
+ <%  posts.forEach((post)=>{ %>
+   <h1><%= post.title %> </h1>
+  <p><%=  post.text.substring(0, 100) + " ... " %>
+  <a href= "/post/<%= post.title %>"> Read More</a>
+  </p> 
+  
+ <% })  %>
+
+
+
+
+
+<% include ../views/partials/footer %>
+
+
+Ejs when working with js syntax we use <% %> to wrap the message
+while <%= %> use to work with variables.
